@@ -1,23 +1,20 @@
-import pytest
+import pytest, os
 from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
 
 
 def pytest_addoption(parser):
   parser.addoption("--browser_name", action="store", default="firefox")
-
-import os
-
 
 @pytest.fixture(scope="class")
 def setup_teardown(request):
   browser_name = request.config.getoption("--browser_name")
   global driver
   if(browser_name == "firefox"):
-    # options = webdriver.FirefoxOptions()
-    # webdriver_path = ':/driver/geckodriver'
+    options = Options()
+    options.headless = True
     os.environ['PATH'] += ':/driver/geckodriver'
-    # options.add_argument(f'--webdriver.gecko.driver={webdriver_path}')
-    driver = webdriver.Firefox()
+    driver = webdriver.Firefox(options=options)
   elif(browser_name == "chrome"):
     driver = webdriver.Chrome()
   driver.maximize_window()
