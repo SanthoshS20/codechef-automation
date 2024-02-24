@@ -25,9 +25,9 @@ jobs:
         python-version: "3.7.16"
     - name: Set up Firefox
       run: |
-        FIREFOX_VERSION=$(firefox --version)
-        echo "Firefox version: $FIREFOX_VERSION"
+        echo "Firefox version: $(firefox --version)"
         echo "Python version: $(python --version)"
+        echo "Pip version: $(pip --version)"
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
@@ -39,7 +39,7 @@ jobs:
         tar -xvzf geckodriver-v${GECKODRIVER_VERSION}-linux64.tar.gz
         chmod +x geckodriver
         mv geckodriver /usr/local/bin/geckodriver
-        echo "Driver version: $(geckodriver --version)"
+        echo "Gecko driver version: $(geckodriver --version)"
     - name: Run test with pytest
       run: |
-        pytest
+        pytest --html=reports/codechef.html -vv
