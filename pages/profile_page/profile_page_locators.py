@@ -1,0 +1,26 @@
+from pages.base_page.base_page_locators import BasePageLocators
+from selenium.webdriver.common.by import By
+
+class ProfilePageLocators(BasePageLocators):
+  EDIT_PROFILE_BUTTON = (By.XPATH, '//p[text()="Edit Profile"]')
+  NAME_FIELD = (By.ID, 'edit-user-name')
+  DOB_FIELD = (By.ID, 'edit-user-dob')
+  MALE_GENDER_FIELD = (By.ID, 'edit-user-gender-1')
+  SAVE_BUTTON = (By.ID, 'edit-submit-button')
+  PERSONAL_TAB = (By.LINK_TEXT, 'Personal')
+  EMAIL_ID_FIELD = (By.ID, 'edit-mail')
+  COUNTRY_DROPDOWN_FIELD = (By.ID, 'edit_geolocation_chosen')
+  COUNTRY_AUTOCOMPLETE_FIELD = (By.XPATH, '//div[@id="edit_geolocation_chosen"]//input[@type="text"]')
+  INDIA_LIST_ITEM = (By.XPATH, '//li[@data-option-array-index="98"]')
+  PERSONAL_TAB_SAVE_BUTTON = (By.ID, 'edit-submit-button-1')
+  CURRENT_PASSWORD_FIELD = (By.ID, 'edit-current-password')
+  NEW_PASSWORD_FIELD = (By.ID, 'edit-password-pass1')
+  CONFIRM_PASSWORD_FIELD = (By.ID, 'edit-password-pass2')
+  UPDATE_PASSWORD_BUTTON = (By.ID, 'edit-submit-button-3')
+  GENERAL_TAB = (By.LINK_TEXT, 'General')
+  LOGIN_TAB = (By.LINK_TEXT, 'Login')
+  LOGIN_INFORMATION_LABEL = (By.XPATH, '//h3[text()="Login Information"]')
+  GENERAL_INFORMATION_UPDATE_SUCCESS_MESSAGE = (By.XPATH, '//div[text()=" General information successfully updated."]')
+  PERSONAL_INFORMATION_UPDATE_SUCCESS_MESSAGE = (By.XPATH, '//div[text()=" Personal Information successfully updated."]')
+  CLOSE_POPUP_BUTTON = (By.CLASS_NAME, 'fa.fa-times')
+  # CLOSE_POPUP_BUTTON =(By.XPATH, '//button[@class="modalbox-error-action1705310000789_close fa fa-times"]')

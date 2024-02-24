@@ -1,0 +1,6 @@
+{
+    "name": "Your Dev Container",
+    "runArgs": ["--privileged"],
+    "postCreateCommand": "sudo apt update && sudo apt install -y firefox-geckodriver"
+}
+  
