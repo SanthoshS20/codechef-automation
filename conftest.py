@@ -11,8 +11,10 @@ def setup_teardown(request):
   browser_name = request.config.getoption("--browser_name")
   global driver
   if(browser_name == "firefox"):
+    # Setup headless mode
     options = Options()
     options.headless = True
+    # Add geckodriver executable in the system's PATH environment variable
     os.environ['PATH'] += ':/driver/geckodriver'
     driver = webdriver.Firefox(options=options)
   elif(browser_name == "chrome"):
