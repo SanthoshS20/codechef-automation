@@ -46,7 +46,7 @@
 
 9. In the Testing activity bar, you will be able to see the complete tests
 
-
+    ```pytest -v -m "login" --browser_name chrome --html reports/testing.html tests/test_login_page/test_login_page.py```
 
 
 Note: To debug, add the breakpoint and click debug test on any of the test file.
