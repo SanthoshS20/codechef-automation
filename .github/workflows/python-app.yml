@@ -41,5 +41,4 @@ jobs:
         mv geckodriver /usr/local/bin/geckodriver
         echo "Gecko driver version: $(geckodriver --version)"
     - name: Run test with pytest
-      run: |
-        pytest --html=reports/codechef.html -vv
+      run: pytest --html=reports/codechef.html -vv
