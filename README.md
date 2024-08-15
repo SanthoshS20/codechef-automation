@@ -51,7 +51,37 @@
 
 
 Note: To debug, add the breakpoint and click debug test on any of the test file.
- 
+
+
+
+
+
+
+1. Install pip & python
+2. Add python path to the PATH env variable. So that the terminal knows where the python exists in.
+3. Install firefox - https://ftp.mozilla.org/pub/firefox/releases/99.0b8/linux-x86_64/en-GB/
+4. Set the firefox executable path to PATH variable
+5. Install geckodriver
+6. Set the geckodriver executable path to PATH variable
+7. Check the pip, python, firefox and geckodriver version
+8. Now you will be able to run the selenium tests
+
+
+Documentation:
+
+https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/
+
+
+https://dev.to/eugenedorfling/installing-the-firefox-web-driver-on-linux-for-selenium-d45
+
+
+https://gist.github.com/stephenharris/90bb468bf80e7f7b02e8b8afe694de4f
+
+
+https://ftp.mozilla.org/pub/firefox/releases/99.0b8/linux-x86_64/en-GB/
+
+
+
 
 ## Link 
 
